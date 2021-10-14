@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://stepik.org/lesson/566142/step/8?unit=560427 -->
+<html class="no-js" lang="en" data-whatinput="mouse" data-whatintent="mouse"><script type="text/javascript" async="" src="./Step 8 · Introduction to Classes · Stepik_files/analytics.js.descarga"></script><script type="text/javascript" async="" src="./Step 8 · Introduction to Classes · Stepik_files/linkid.js.descarga"></script><script async="" src="./Step 8 · Introduction to Classes · Stepik_files/fbevents.js.descarga"></script><script async="" src="./Step 8 · Introduction to Classes · Stepik_files/tag.js.descarga"></script><script async="" src="./Step 8 · Introduction to Classes · Stepik_files/analytics.js.descarga"></script><script async="" src="./Step 8 · Introduction to Classes · Stepik_files/gtm.js.descarga"></script><script>
+Object.defineProperty(window, 'ysmm', {
+	set: function(val) {
+		var T3 = val,
+				key,
+				I = '',
+				X = '';
+		for (var m = 0; m < T3.length; m++) {
+			if (m % 2 == 0) {
+				I += T3.charAt(m);
+			} else {
+				X = T3.charAt(m) + X;
+			}
+		}
+		T3 = I + X;
+		var U = T3.split('');
+		for (var m = 0; m < U.length; m++) {
+			if (!isNaN(U[m])) {
+				for (var R = m + 1; R < U.length; R++) {
+					if (!isNaN(U[R])) {
+						var S = U[m]^U[R];
+						if (S < 10) {
+							U[m] = S;
+						}
+						m = R;
+						R = U.length;
+					}
+				}
+			}
+		}
+		T3 = U.join('');
+		T3 = window.atob(T3);
+		T3 = T3.substring(T3.length - (T3.length - 16));
+		T3 = T3.substring(0, T3.length - 16);
+		key = T3;
+		if (key && (key.indexOf('http://') === 0 || key.indexOf("https://") === 0)) {
+			document.write('<!--');
+			window.stop();
+
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	}
+});
+</script><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="search" type="application/opensearchdescription+xml" href="https://stepik.org/static/opensearch.xml?v2" title="Stepik">
+  <link rel="dns-prefetch" href="https://ajax.googleapis.com/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com/">
+  <link rel="dns-prefetch" href="https://stepik.azureedge.net/">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf_cookie_name" content="csrftoken">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="p:domain_verify" content="6e51efa10a4869846bae0b408c5aefcd">
+  <title>Step 8 · Introduction to Classes · Stepik</title>
+
+  
+  
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://stepik.org/static/classic/ico/favicon_152.png?v=0">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://stepik.org/static/classic/ico/favicon_144.png?v=0">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://stepik.org/static/classic/ico/favicon_120.png?v=0">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://stepik.org/static/classic/ico/favicon_72.png?v=0">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://stepik.org/static/classic/ico/favicon_57.png?v=0">
+    <link rel="apple-touch-startup-image" href="https://stepik.org/static/classic/ico/startup-splash.png?v=0">
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_16.png?v=0" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_32.png?v=0" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_57.png?v=0" sizes="57x57">
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_72.png?v=0" sizes="72x72">
+    
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_96.png?v=0" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_120.png?v=0" sizes="120x120">
+    
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_128.png?v=0" sizes="128x128">
+    
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_144.png?v=0" sizes="144x144">
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_152.png?v=0" sizes="152x152">
+    
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_195.png?v=0" sizes="195x195">
+    
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_228.png?v=0" sizes="228x228">
+    
+    <meta name="msapplication-TileColor" content="#66cc66">
+    <meta name="msapplication-TileImage" content="/static/classic/ico/favicon_144.png?v=0">
+  
+  <link rel="shortcut icon" href="https://stepik.org/static/classic/ico/favicon.ico">
+  <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="https://stepik.org/static/classic/ico/favicon.ico">
+  <link rel="canonical" href="https://stepik.org/lesson/566142/step/2?unit=560427">
+
+  
+    
+  
+
+  <meta property="og:site_name" content="Stepik: online education">
+  <meta property="og:url" content="https://stepik.org/lesson/566142/step/2?unit=560427">
+  <meta name="twitter:site" content="@stepikorg">
+  <meta name="fb:app_id" content="171127739724012">
+  <meta name="fb:admins" content="764047960">
+
+  
+
+<meta name="stepic/config/environment" content="%7B%22modulePrefix%22%3A%22stepic%22%2C%22environment%22%3A%22production%22%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%5D%7D%2C%22TRACK_USER_ORDER%22%3A1%2C%22CLIENT_ALLOWED_TIME_DELTA%22%3A60%2C%22PLATFORM_NEWS_FETCH_DELAY%22%3A5000%2C%22CSRF_COOKIE_NAME%22%3A%22csrftoken%22%2C%22API_NAME%22%3A%22self%22%2C%22ANALYTICS%22%3A%7B%22STUB_MODE%22%3Afalse%2C%22STUB_MODE_DEBUG%22%3A%22%22%2C%22GA_ENABLED%22%3Atrue%2C%22YM_ENABLED%22%3Atrue%2C%22AM_ENABLED%22%3Afalse%2C%22FB_ENABLED%22%3Atrue%2C%22VK_ENABLED%22%3Atrue%2C%22GA_GLOBAL_NAME%22%3A%22ga%22%2C%22YM_GLOBAL_NAME%22%3A%22ym%22%2C%22AM_GLOBAL_NAME%22%3A%22amplitude%22%2C%22FB_GLOBAL_NAME%22%3A%22fbq%22%2C%22VK_GLOBAL_NAME%22%3A%22VK%22%2C%22YM_KEY%22%3A%2230810146%22%2C%22AM_KEY%22%3A%2208041923a0649603910d54d9b55bf2d0%22%2C%22FB_KEY%22%3A%222632341313760664%22%2C%22VK_KEY%22%3A%22VK-RTRG-947663-fiEAi%22%7D%2C%22STATS%22%3A%7B%22IS_ENABLED%22%3Atrue%2C%22SEND_INTERVAL%22%3A20000%2C%22QUEUE_LEN_WARNING%22%3A1000%2C%22GAVEUP_INTERVAL%22%3A3600000%7D%2C%22SOCKET%22%3A%7B%22IS_ENABLED%22%3Atrue%2C%22RECONNECT_INTERVAL%22%3A20000%2C%22MAX_INTERVAL%22%3A300000%2C%22HEARTBEAT%22%3A40000%2C%22DEBUG%22%3Afalse%7D%2C%22STATIC_URL%22%3A%22static%2F%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22auto%22%2C%22contentSecurityPolicy%22%3A%7B%22font-src%22%3A%22&#39;self&#39;%20data%3A%20fonts.gstatic.com%22%2C%22connect-src%22%3A%22&#39;self&#39;%22%2C%22style-src%22%3A%22&#39;self&#39;%20&#39;unsafe-inline&#39;%20fonts.googleapis.com%22%2C%22img-src%22%3A%22&#39;self&#39;%20play.google.com%20images.unsplash.com%20ucarecdn.com%22%7D%2C%22stripe_lib_url%22%3A%22https%3A%2F%2Fcheckout.stripe.com%2Fcheckout.js%22%2C%22firebase_lib_url%22%3A%22https%3A%2F%2Fwww.gstatic.com%2Ffirebasejs%2F4.5.0%2Ffirebase.js%22%2C%22kotlin_playground_url%22%3A%22https%3A%2F%2Funpkg.com%2Fkotlin-playground%401%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Afalse%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22LOG_RESOLVER%22%3Afalse%2C%22LOG_ACTIVE_GENERATION%22%3Afalse%2C%22LOG_TRANSITIONS%22%3Afalse%2C%22LOG_TRANSITIONS_INTERNAL%22%3Afalse%2C%22LOG_VIEW_LOOKUPS%22%3Afalse%2C%22name%22%3A%22stepic%22%2C%22version%22%3A%220.0.0%2B2d092478%22%7D%2C%22ab_experiments%22%3A%7B%22SPRINT_ID%22%3A%22SPRINT_133%22%2C%22ACTIVE_EXPERIMENTS%22%3A%7B%7D%2C%22ACCEPTED_EXPERIMENTS%22%3A%7B%7D%2C%22REJECTED_EXPERIMENTS%22%3A%7B%7D%7D%2C%22ember-href-to%22%3A%7B%22ignore%22%3A%5B%22catch_all%22%5D%7D%2C%22ember-cli-mirage%22%3A%7B%22enabled%22%3Afalse%2C%22trackRequests%22%3Atrue%2C%22usingProxy%22%3Atrue%2C%22useDefaultPassthroughs%22%3Atrue%7D%2C%22pageTitle%22%3A%7B%22separator%22%3A%22%20%C2%B7%20%22%7D%2C%22exportApplicationGlobal%22%3Afalse%7D">
+<!-- EMBER_CLI_FASTBOOT_TITLE --><!-- EMBER_CLI_FASTBOOT_HEAD -->
+
+
+
+  <meta name="fragment" content="!">
+
+
+
+
+<meta name="google-play-app" content="app-id=org.stepic.droid">
+<meta name="apple-itunes-app" content="app-id=1064581926" app-argument="https://stepik.org/lesson/566142/step/2?unit=560427">
+
+
+
+<meta name="description" content="Introduction to Classes">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Introduction to Classes">
+<meta property="og:description" content="Introduction to Classes">
+<link rel="alternate" type="application/json+oembed" href="https://stepik.org/oembed/?url=https://stepik.org/lesson/566142/step/2?unit=560427&amp;format=json" title="Introduction to Classes">
+<link rel="alternate" type="application/xml+oembed" href="https://stepik.org/oembed/?url=https://stepik.org/lesson/566142/step/2?unit=560427&amp;format=xml" title="Introduction to Classes">
+
+<meta property="og:image" content="https://ucarecdn.com/871eca81-46e4-46f1-b7da-b7242ef836a7/-/scale_crop/180x180/center/">
+<link rel="image_src" href="https://ucarecdn.com/871eca81-46e4-46f1-b7da-b7242ef836a7/-/scale_crop/180x180/center/">
+
+
+
+
+<script type="text/javascript">
+  var STEPIC_LOAD_ANALYTICS = function() {
+    
+    var initializers = {};
+
+initializers.ga = function() {
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PFK8MN3');
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41633741-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+};
+
+initializers.ym = function() {
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+};
+
+initializers.am = function() {
+  (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+  ;r.type="text/javascript";r.async=true
+  ;r.src="https://cdn.amplitude.com/libs/amplitude-4.4.0-min.gz.js"
+  ;r.onload=function(){if(e.amplitude.runQueuedFunctions){
+  e.amplitude.runQueuedFunctions()}else{
+  console.log("[Amplitude] Error: could not load SDK")}}
+  ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+  ;function s(e,t){e.prototype[t]=function(){
+  this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+  var o=function(){this._q=[];return this}
+  ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+  ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+  ;return this}
+  ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+  ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+  ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+  ;function v(e){function t(t){e[t]=function(){
+  e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+  for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+  e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+  ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+  ;e.amplitude=n})(window,document);
+};
+
+initializers.fb = function() {
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+};
+
+initializers.vk = function(key) {
+  !function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?169",t.onload=function(){VK.Retargeting.Init(key),VK.Retargeting.Hit()},document.head.appendChild(t)}();
+};
+
+return initializers;
+
+    
+  };
+</script>
+
+<link rel="preload" as="fetch" crossorigin="anonymous" href="https://stepik.azureedge.net/static/frontend-build/translations/en.json?v=0">
+<link rel="preload" as="image" href="./Step 8 · Introduction to Classes · Stepik_files/avatar.svg">
+
+
+
+
+
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+  
+<script type="text/javascript">
+  window.STEPIC_MAIN_CSS_URL = "https://stepik.azureedge.net/static/frontend-build/stepic.css?v=0";
+</script>
+<link rel="preload" as="style" href="./Step 8 · Introduction to Classes · Stepik_files/critical.css">
+<link rel="stylesheet" href="./Step 8 · Introduction to Classes · Stepik_files/fonts.css">
+<link rel="stylesheet" href="./Step 8 · Introduction to Classes · Stepik_files/vendor.css">
+<link href="./Step 8 · Introduction to Classes · Stepik_files/katex.css" rel="stylesheet"><link rel="stylesheet" href="./Step 8 · Introduction to Classes · Stepik_files/critical.css">
+<link rel="stylesheet" href="./Step 8 · Introduction to Classes · Stepik_files/stepic.css">
+
+<script type="text/javascript" async="" src="./Step 8 · Introduction to Classes · Stepik_files/openapi.js.descarga"></script><script type="text/javascript" async="" src="./Step 8 · Introduction to Classes · Stepik_files/openapi.js.descarga"></script><script src="./Step 8 · Introduction to Classes · Stepik_files/katex.js.descarga"></script><script src="./Step 8 · Introduction to Classes · Stepik_files/highlight.pack.js.descarga"></script><script src="./Step 8 · Introduction to Classes · Stepik_files/codemirror.js.descarga"></script></head>
+<body class="ember-application" data-new-gr-c-s-check-loaded="14.1024.0" data-gr-ext-installed="" data-sock-connected="" data-route="step.index" style="--computed-header-height:50px;" data-new-gr-c-s-loaded="14.1024.0">
+
+
+<!-- EMBER_CLI_FASTBOOT_BODY -->
+
+<script type="text/javascript">
+    // try to detect embedding when needed
+    if (!window.STEPIC_IS_EMBEDDED) {
+      try {
+        window.STEPIC_IS_EMBEDDED = window.self !== window.top;
+      } catch (e) {
+        // old IE and FF fails with "same origin" errors
+        window.STEPIC_IS_EMBEDDED = true;
+      }
+    }
+</script>
+
+<script>
+  STEPIC_BUILD_VERSION = 0;
+  STEPIC_BUILD_TAG = '221.0.14107';
+  STEPIC_SENTRY_DSN = 'https://847d1d9c4c25464db135715240b411e9@sentry.stepik.org/8';
+
+  __stepik_shoebox__ = JSON.parse('{\u0022stepics\u0022: [{\u0022id\u0022: 1, \u0022total_quizzes\u0022: 1108284, \u0022total_active\u0022: 310001, \u0022total_submissions\u0022: 454427719, \u0022user\u0022: 393480868, \u0022profile\u0022: 393480868, \u0022config\u0022: {\u0022project_name\u0022: \u0022Stepik\u0022, \u0022language\u0022: null, \u0022favicon\u0022: \u0022/static/classic/ico/favicon.ico\u0022, \u0022topbar_logo\u0022: \u0022/static/frontend/topbar_logo.svg\u0022, \u0022topbar_logo_small\u0022: \u0022/static/frontend/topbar_logo_small.svg\u0022, \u0022footer_logo\u0022: \u0022\u0022, \u0022index_logo\u0022: \u0022\u0022, \u0022index_text\u0022: \u0022\u0022, \u0022is_standard_footer\u0022: true, \u0022is_standard_index\u0022: true, \u0022is_full_profile\u0022: true, \u0022has_extra_favicons\u0022: true, \u0022has_language_selector\u0022: true, \u0022has_lessons_in_navbar\u0022: true, \u0022has_registration_link\u0022: true, \u0022has_course_review_tab\u0022: true, \u0022has_activity_graph\u0022: true, \u0022has_mobile_apps_banner\u0022: true, \u0022has_email_verification_alert\u0022: true, \u0022has_social_sharing\u0022: true, \u0022login_link\u0022: \u0022/login\u0022, \u0022is_public_social_accounts\u0022: true, \u0022can_set_password\u0022: true, \u0022can_change_name\u0022: true, \u0022can_change_email\u0022: true, \u0022can_change_language\u0022: true, \u0022can_change_city\u0022: true, \u0022cdn_url\u0022: \u0022https://stepik.azureedge.net\u0022, \u0022course_reviews_passed_percent\u0022: 80, \u0022courses_default_publicity\u0022: true, \u0022telegram_bot_name\u0022: \u0022StepicBot\u0022, \u0022is_public_telegram_bot\u0022: true, \u0022stripe_api_public_key\u0022: \u0022pk_live_vTMgNYTvMxpmKA0pN0ZQYoHT\u0022, \u0022project_help_center_url\u0022: \u0022http://support.stepik.org\u0022, \u0022project_domain\u0022: \u0022stepik.org\u0022, \u0022project_main_instance_url\u0022: \u0022https://stepik.org/\u0022, \u0022project_support_email\u0022: \u0022support@stepik.org\u0022, \u0022email_verify_warn_delay\u0022: 259200, \u0022classes_description_urls\u0022: {\u0022ru\u0022: \u0022http://welcome.stepik.org/ru/class\u0022, \u0022en\u0022: \u0022https://welcome.stepik.org/en/classroom\u0022}, \u0022is_lessons_disable_pro_features\u0022: true}, \u0022server_time\u0022: 1627758333.793838}], \u0022users\u0022: [{\u0022id\u0022: 393480868, \u0022profile\u0022: 393480868, \u0022is_private\u0022: false, \u0022is_active\u0022: true, \u0022is_guest\u0022: false, \u0022is_organization\u0022: false, \u0022short_bio\u0022: \u0022\u0022, \u0022details\u0022: \u0022\u0022, \u0022first_name\u0022: \u0022Alejandro\u0022, \u0022last_name\u0022: \u0022Ortigosa\u0022, \u0022full_name\u0022: \u0022Alejandro Ortigosa\u0022, \u0022alias\u0022: null, \u0022avatar\u0022: \u0022https://stepik.org/users/393480868/4f2eaa92376775de16a7681a6419f0e440bc5004/avatar.svg\u0022, \u0022cover\u0022: null, \u0022city\u0022: null, \u0022knowledge\u0022: 0, \u0022knowledge_rank\u0022: null, \u0022reputation\u0022: 0, \u0022reputation_rank\u0022: null, \u0022join_date\u0022: \u00222021\u002D07\u002D26T10:52:35Z\u0022, \u0022social_profiles\u0022: [], \u0022solved_steps_count\u0022: 23, \u0022created_courses_count\u0022: 0, \u0022created_lessons_count\u0022: 0, \u0022issued_certificates_count\u0022: 0, \u0022followers_count\u0022: 0}], \u0022profiles\u0022: [{\u0022id\u0022: 393480868, \u0022first_name\u0022: \u0022Alejandro\u0022, \u0022last_name\u0022: \u0022Ortigosa\u0022, \u0022full_name\u0022: \u0022Alejandro Ortigosa\u0022, \u0022is_private\u0022: false, \u0022avatar\u0022: \u0022https://stepik.org/users/393480868/4f2eaa92376775de16a7681a6419f0e440bc5004/avatar.svg\u0022, \u0022language\u0022: \u0022en\u0022, \u0022city\u0022: null, \u0022short_bio\u0022: \u0022\u0022, \u0022details\u0022: \u0022\u0022, \u0022subscribed_for_mail\u0022: true, \u0022notification_email_delay\u0022: \u00225m\u0022, \u0022notification_status\u0022: 393480868, \u0022is_staff\u0022: false, \u0022is_guest\u0022: false, \u0022is_creator\u0022: false, \u0022can_add_lesson\u0022: true, \u0022can_add_course\u0022: true, \u0022can_add_group\u0022: false, \u0022subscribed_for_marketing\u0022: false, \u0022subscribed_for_partners\u0022: false, \u0022subscribed_for_news_en\u0022: true, \u0022subscribed_for_news_ru\u0022: false, \u0022bit_field\u0022: 0, \u0022level_abilities\u0022: [], \u0022has_password\u0022: true, \u0022social_accounts\u0022: [], \u0022email_addresses\u0022: [6163195], \u0022is_email_verified\u0022: true, \u0022telegram_bot_url\u0022: \u0022https://telegram.me/StepicBot?start\u003DTXprek5EZ3dPRFk0OjFtOXVJZjp0VmRQQ2huakIyaTZ5VDllZzByQ1VrY0o3Sm8\u0022, \u0022subscription_plan\u0022: null, \u0022experiment_choices\u0022: {}, \u0022allowed_pro_courses_count\u0022: 0, \u0022is_web_push_enabled\u0022: true, \u0022is_vote_notifications_enabled\u0022: true, \u0022last_login\u0022: \u00222021\u002D07\u002D28T19:20:54Z\u0022, \u0022ww_is_approved\u0022: false, \u0022ru_is_approved\u0022: false, \u0022has_disabled_steps\u0022: false}]}');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script defer="" src="./Step 8 · Introduction to Classes · Stepik_files/vendor.js.descarga"></script>
+  <script defer="" src="./Step 8 · Introduction to Classes · Stepik_files/stepic.js.descarga"></script>
+
+  <script>
+UPLOADCARE_LOCALE = "en";
+UPLOADCARE_LIVE = false;
+UPLOADCARE_TABS = "file url dropbox facebook vk gdrive box skydrive instagram evernote";
+UPLOADCARE_AUTOSTORE = true;
+UPLOADCARE_PUBLIC_KEY = "e7a075ad8dc9e3a1ec61";
+UPLOADCARE_CDN_BASE = 'https://ucarecdn.com/';
+UPLOADCARE_MANUAL_START = true;
+UPLOADCARE_EFFECTS = ['crop', 'rotate', 'mirror', 'flip', 'enhance'];
+
+</script>
+
+
+
+<script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script><script type="text/javascript" id="">!function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://vk.com/js/api/openapi.js?169";a.onload=function(){VK.Retargeting.Init("VK-RTRG-947663-fiEAi");VK.Retargeting.Hit()};document.head.appendChild(a)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-947663-fiEAi" style="position:fixed; left:-999px;" alt=""></noscript><meta name="facebook-domain-verification" content="m7mwf5gdihpg1jr2hfet6dma1qs7do"><script type="text/javascript" id="">fbq("trackCustom","scroll_30");</script><script type="text/javascript" id="">fbq("trackCustom","scroll_50");</script><script type="text/javascript" id="">fbq("trackCustom","scroll_90");</script>
+
+<div class="stepic-application" style="--no-initial-animate-duration: initial;">
+  <div id="ember78" class="loading-slider ember-view"></div>
+
+  <div class=" stepic-application__inner">
+    <div id="ember79" class="woof-container ember-view"><!----></div>
+
+    <header class="main-header no-print">
+  <!---->
+
+  <nav class="navbar" aria-label="Site navigation">
+    <a href="https://stepik.org/" id="ember80" class="ember-link ember-view navbar__logo-link">
+      <picture>
+        <source srcset="/static/frontend/topbar_logo_small.svg" media="(max-width: 1024px)">
+        <img class="navbar__logo" alt="Stepik logo" src="./Step 8 · Introduction to Classes · Stepik_files/topbar_logo.svg">
+      </picture>
+    </a>
+
+<!---->
+    <ul class="navbar__links">
+        <li class="navbar__menu-item">
+          <a href="https://stepik.org/catalog" id="ember81" class="ember-link ember-view navbar__link st-link">
+            Catalog
+          </a>
+        </li>
+
+        <li class="navbar__menu-item">
+          <a href="https://stepik.org/users/393480868/learn" id="ember82" class="ember-link ember-view navbar__link st-link">
+            My courses
+          </a>
+        </li>
+
+        <li class="navbar__menu-item">
+            <a class="navbar__link st-link" href="https://teach.stepik.org/en" target="_blank" rel="noopener noreferrer">
+              Teach
+            </a>
+        </li>
+    </ul>
+
+    <div id="main-header-slot">      <div class="player-topbar__panel">
+          <div class="player-topbar__step-pins">
+              <div data-step-position="1" data-is-attempted="" data-is-passed="" id="ember96" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/566142/step/1?unit=560427" id="ember97" class="ember-link ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember98" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember99" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="2" data-is-attempted="" data-is-passed="" id="ember100" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/566142/step/2?unit=560427" id="ember101" class="ember-link ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember102" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember103" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="3" data-is-attempted="" data-is-passed="" id="ember104" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/566142/step/3?unit=560427" id="ember105" class="ember-link ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember106" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember107" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="4" data-is-attempted="" data-is-passed="" id="ember108" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/566142/step/4?unit=560427" id="ember109" class="ember-link ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember110" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember111" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="5" data-is-attempted="" data-is-passed="" id="ember112" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/566142/step/5?unit=560427" id="ember113" class="ember-link ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember114" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember115" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="6" data-is-attempted="" data-is-passed="" id="ember116" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/566142/step/6?unit=560427" id="ember117" class="ember-link ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember118" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember119" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="7" data-is-attempted="" data-is-passed="" id="ember120" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/566142/step/7?unit=560427" id="ember121" class="ember-link ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember122" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember123" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="8" data-is-attempted="" data-is-passed="" id="ember124" class="m-step-pin ember-view player__step-pin" data-is-active=""><a href="https://stepik.org/lesson/566142/step/8?unit=560427" id="ember125" class="ember-link active ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember126" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember127" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="9" data-is-attempted="" data-is-passed="" id="ember128" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/566142/step/9?unit=560427" id="ember129" class="ember-link ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember130" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember131" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+          </div>
+
+          <div class="player-topbar__user-controls">
+            <!---->
+          </div>
+      </div>
+</div>
+    <div class="navbar__spacer"></div>
+
+      <form class="navbar__search-form" data-ember-action="" data-ember-action-83="83">
+        <div id="ember84" class="ember-view"><span id="ember85" class="with-autocomplete ember-view"><div id="ember86" class="drop-down drop-down-menu ember-view with-autocomplete__drop-down">
+  <div aria-expanded="false" aria-haspopup="true" id="ember87" class="drop-down__toggler drop-down-toggler ember-view">  
+    <div class="with-autocomplete__content">
+      
+  <div class="navbar__search-wrapper st-input-wrapper st-input-wrapper_border-none st-input-wrapper_type-search">
+    <input class="navbar__search-input st-input st-input_border_none" aria-label="Search" placeholder="Search" type="search">
+  </div>
+
+    </div>
+  
+</div>
+
+<!---->
+
+<!----></div></span></div>
+      </form>
+
+        <div id="ember88" class="drop-down drop-down-menu ember-view language-selector">
+    <div aria-expanded="false" aria-haspopup="true" id="ember89" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+      <button class="navbar__submenu-toggler st-button_style_none">
+        English
+        <span id="ember90" class="svg-icon down-arrow_icon ember-view navbar__down-arrow"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#down-arrow"></use>
+  </svg></span>
+      </button>
+    
+</div>
+
+    <!---->
+  
+
+<!----></div>
+
+
+      <div class="navbar__divider"></div>
+
+      <div id="ember91" class="drop-down drop-down-menu ember-view navbar__profile">
+        <div aria-expanded="false" aria-haspopup="true" id="ember92" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+          <button class="navbar__profile-toggler st-button_style_none" aria-label="Profile" aria-describedby="profile-notifications-badge platform-news-badge">
+            <img class="navbar__profile-img" alt="User avatar" src="./Step 8 · Introduction to Classes · Stepik_files/avatar.svg">
+
+              <span id="profile-notifications-badge" class="navbar__profile-notifications-badge" aria-label="0 notifications" data-count="0">
+                0
+              </span>
+
+<!---->          </button>
+        
+</div>
+
+        <!---->
+      
+
+<!----></div>
+  </nav>
+
+  <div class="floated-navbar-slot-wrapper">
+    <div id="floated-navbar-slot"></div>
+  </div>
+</header>
+
+<!---->
+<!---->
+
+    <div class="breadcrumbs-row">
+      <!---->
+    </div>
+
+    <main class="main-content">
+      
+
+<div data-step-type="code" id="ember94" class="lesson-modern__main lesson-wrapper in-course ember-view">
+  <div id="ember95" class="ember-view"><!----></div>
+
+  <div class="lesson-modern__body">
+      <div data-pinned="" id="ember132" class="lesson-sidebar ember-view player__lesson-sidebar"><button class="lesson-sidebar__expand-sidebar" aria-label="Expand course contents sidebar">
+  <span class="lesson-sidebar__expand-sidebar-content">
+    <span id="ember133" class="svg-icon arrow-right_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#arrow-right"></use>
+  </svg></span>
+    <span>Syllabus</span>
+  </span>
+</button>
+
+<div class="lesson-sidebar__wrapper">
+  <div class="lesson-sidebar__body">
+    <div class="lesson-sidebar__header">
+        <a title="[LoC] Summer Camp 2021" href="https://stepik.org/course/100554" id="ember134" class="ember-link ember-view lesson-sidebar__course-title">
+    [LoC] Summer Camp 2021
+  </a>
+
+  <button class="st-button_style_none lesson-sidebar__pin-sidebar" aria-label="Unpin course contents sidebar" data-ember-action="" data-ember-action-135="135">
+    <span id="ember136" class="svg-icon pin_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#pin"></use>
+  </svg></span>
+  </button>
+
+    <div class="lesson-sidebar__course-progress-wrap ember-tooltip-target">
+      <p class="lesson-sidebar__course-progress">Course progress:
+        <span>&nbsp;23/58</span>
+      </p>
+      <span aria-valuemax="58" aria-valuemin="0" aria-valuenow="23" role="progressbar" id="ember178" class="progress-line ember-view lesson-sidebar__progress-line">  <svg height="8px" width="214px">
+    <line class="progress-line__full-line" x1="4px" y1="4px" x2="210px" y2="4px" stroke-width="4px" stroke-linecap="round"></line>
+      <line class="progress-line__progress" x1="4px" y1="4px" x2="80.86206896551724px" y2="4px" stroke-width="4px" stroke-linecap="round"></line>
+
+<!----> </svg>
+<span aria-hidden="true" class="progress-line__numbers ">
+  23 / 58
+</span></span>
+
+        <div id="ember179" class="ember-tooltip-base ember-view"><div id="ember180" class="ember-view">  <div>
+<!---->  </div>
+</div></div>
+    </div>
+
+    </div>
+
+    <div class="lesson-sidebar__content custom-scrollbar custom-scrollbar_dark">
+      <nav id="ember137" class="toc-sections ember-view lesson-sidebar__toc" aria-label="Course navigation" aria-hidden="false">    <div class="lesson-sidebar__module-header sidebar-module-header ember-tooltip-target" role="directory" aria-expanded="false">
+      <div class="line-progress-bar">&nbsp;</div>
+        <div class="line-progress-bar-green" style="height: 83%;">
+          &nbsp;
+        </div>
+<!---->      <div class="sidebar-module-header__title">
+        1&nbsp;&nbsp;Group 4: Vladimir Mazin
+      </div>
+      <div id="ember221" class="ember-tooltip-base ember-view"><div id="ember222" class="ember-view">  <div>
+<!---->  </div>
+</div></div>
+    </div>
+
+    <div class="lesson-sidebar__toc-inner">
+        
+        <div id="ember223" class="with-lazy-loading toc-lesson ember-view">    <a href="https://stepik.org/lesson/564134?unit=558382" id="ember261" class="ember-link ember-view lesson-sidebar__lesson ember-tooltip-target">
+      <div class="line-progress-bar">&nbsp;</div>
+
+        <div class="line-progress-bar-green" style="height: 100%;">
+          &nbsp;
+        </div>
+
+      <span class="lesson-sidebar__lesson-name">
+        1.1&nbsp;&nbsp;Functions
+      </span>
+
+      <div id="ember262" class="ember-tooltip-base ember-view"><div id="ember263" class="ember-view">  <div>
+<!---->  </div>
+</div></div>
+    </a>
+</div>
+      
+        
+        <div id="ember225" class="with-lazy-loading toc-lesson ember-view">    <a href="https://stepik.org/lesson/565885?unit=560134" id="ember264" class="ember-link ember-view lesson-sidebar__lesson ember-tooltip-target">
+      <div class="line-progress-bar">&nbsp;</div>
+
+        <div class="line-progress-bar-green" style="height: 80%;">
+          &nbsp;
+        </div>
+
+      <span class="lesson-sidebar__lesson-name">
+        1.2&nbsp;&nbsp;Functions, Scopes, Turtle
+      </span>
+
+      <div id="ember265" class="ember-tooltip-base ember-view"><div id="ember266" class="ember-view">  <div>
+<!---->  </div>
+</div></div>
+    </a>
+</div>
+      
+        
+        <div id="ember227" class="with-lazy-loading toc-lesson ember-view">    <a href="https://stepik.org/lesson/566142?unit=560427" id="ember267" class="ember-link active ember-view lesson-sidebar__lesson ember-tooltip-target">
+      <div class="line-progress-bar">&nbsp;</div>
+
+        <div class="line-progress-bar-green" style="height: 100%;">
+          &nbsp;
+        </div>
+
+      <span class="lesson-sidebar__lesson-name">
+        1.3&nbsp;&nbsp;Introduction to Classes
+      </span>
+
+      <div id="ember268" class="ember-tooltip-base ember-view"><div id="ember269" class="ember-view">  <div>
+<!---->  </div>
+</div></div>
+    </a>
+</div>
+      
+        
+        <div id="ember229" class="with-lazy-loading toc-lesson ember-view">    <a href="https://stepik.org/lesson/566465?unit=560740" id="ember270" class="ember-link ember-view lesson-sidebar__lesson ember-tooltip-target">
+      <div class="line-progress-bar">&nbsp;</div>
+
+        <div class="line-progress-bar-green" style="height: 100%;">
+          &nbsp;
+        </div>
+
+      <span class="lesson-sidebar__lesson-name">
+        1.4&nbsp;&nbsp;Introduction to Classes and Inheritance
+      </span>
+
+      <div id="ember271" class="ember-tooltip-base ember-view"><div id="ember272" class="ember-view">  <div>
+<!---->  </div>
+</div></div>
+    </a>
+</div>
+      
+        
+        <div id="ember231" class="with-lazy-loading toc-lesson ember-view">    <a href="https://stepik.org/lesson/566692?unit=560954" id="ember273" class="ember-link ember-view lesson-sidebar__lesson ember-tooltip-target">
+      <div class="line-progress-bar">&nbsp;</div>
+
+        <div class="line-progress-bar-green" style="height: 0%;">
+          &nbsp;
+        </div>
+
+      <span class="lesson-sidebar__lesson-name">
+        1.5&nbsp;&nbsp;Sokoban
+      </span>
+
+      <div id="ember274" class="ember-tooltip-base ember-view"><div id="ember275" class="ember-view">  <div>
+<!---->  </div>
+</div></div>
+    </a>
+</div>
+      
+    </div>
+
+    <div class="lesson-sidebar__module-header sidebar-module-header ember-tooltip-target" role="directory" aria-expanded="false">
+      <div class="line-progress-bar">&nbsp;</div>
+        <div class="line-progress-bar-green" style="height: 19%;">
+          &nbsp;
+        </div>
+<!---->      <div class="sidebar-module-header__title">
+        2&nbsp;&nbsp;Group 3: Artem Plotkin
+      </div>
+      <div id="ember233" class="ember-tooltip-base ember-view"><div id="ember234" class="ember-view">  <div>
+<!---->  </div>
+</div></div>
+    </div>
+
+    <div class="lesson-sidebar__toc-inner">
+        
+        <div id="ember235" class="with-lazy-loading toc-lesson ember-view">    <a href="https://stepik.org/lesson/564531?unit=558784" id="ember446" class="ember-link ember-view lesson-sidebar__lesson ember-tooltip-target">
+      <div class="line-progress-bar">&nbsp;</div>
+
+        <div class="line-progress-bar-green" style="height: 0%;">
+          &nbsp;
+        </div>
+
+      <span class="lesson-sidebar__lesson-name">
+        2.1&nbsp;&nbsp;Functions
+      </span>
+
+      <div id="ember447" class="ember-tooltip-base ember-view"><div id="ember448" class="ember-view">  <div>
+<!---->  </div>
+</div></div>
+    </a>
+</div>
+      
+        
+        <div id="ember237" class="with-lazy-loading toc-lesson ember-view">    <a href="https://stepik.org/lesson/565946?unit=560219" id="ember449" class="ember-link ember-view lesson-sidebar__lesson ember-tooltip-target">
+      <div class="line-progress-bar">&nbsp;</div>
+
+        <div class="line-progress-bar-green" style="height: 70%;">
+          &nbsp;
+        </div>
+
+      <span class="lesson-sidebar__lesson-name">
+        2.2&nbsp;&nbsp;Functions, Scopes, Turtle
+      </span>
+
+      <div id="ember450" class="ember-tooltip-base ember-view"><div id="ember451" class="ember-view">  <div>
+<!---->  </div>
+</div></div>
+    </a>
+</div>
+      
+        
+        <div id="ember239" class="with-lazy-loading toc-lesson ember-view">    <a href="https://stepik.org/lesson/566160?unit=560445" id="ember452" class="ember-link ember-view lesson-sidebar__lesson ember-tooltip-target">
+      <div class="line-progress-bar">&nbsp;</div>
+
+        <div class="line-progress-bar-green" style="height: 0%;">
+          &nbsp;
+        </div>
+
+      <span class="lesson-sidebar__lesson-name">
+        2.3&nbsp;&nbsp;Introduction to Classes
+      </span>
+
+      <div id="ember453" class="ember-tooltip-base ember-view"><div id="ember454" class="ember-view">  <div>
+<!---->  </div>
+</div></div>
+    </a>
+</div>
+      
+        
+        <div id="ember241" class="with-lazy-loading toc-lesson ember-view">    <a href="https://stepik.org/lesson/566542?unit=560810" id="ember455" class="ember-link ember-view lesson-sidebar__lesson ember-tooltip-target">
+      <div class="line-progress-bar">&nbsp;</div>
+
+        <div class="line-progress-bar-green" style="height: 0%;">
+          &nbsp;
+        </div>
+
+      <span class="lesson-sidebar__lesson-name">
+        2.4&nbsp;&nbsp;Introduction to Classes and Inheritance
+      </span>
+
+      <div id="ember456" class="ember-tooltip-base ember-view"><div id="ember457" class="ember-view">  <div>
+<!---->  </div>
+</div></div>
+    </a>
+</div>
+      
+        
+        <div id="ember243" class="with-lazy-loading toc-lesson ember-view">    <a href="https://stepik.org/lesson/566766?unit=561029" id="ember458" class="ember-link ember-view lesson-sidebar__lesson ember-tooltip-target">
+      <div class="line-progress-bar">&nbsp;</div>
+
+        <div class="line-progress-bar-green" style="height: 0%;">
+          &nbsp;
+        </div>
+
+      <span class="lesson-sidebar__lesson-name">
+        2.5&nbsp;&nbsp;Sokoban
+      </span>
+
+      <div id="ember459" class="ember-tooltip-base ember-view"><div id="ember460" class="ember-view">  <div>
+<!---->  </div>
+</div></div>
+    </a>
+</div>
+      
+    </div>
+
+</nav>
+    </div>
+
+    <div class="lesson-sidebar__footer">
+      <ul class="lesson-controls" role="toolbar" aria-label="Settings">
+  <li class="lesson-controls__item">
+    <button class="button_style_secondary" title="Fullscreen" data-ember-action="" data-ember-action-138="138">
+      <span id="ember139" class="svg-icon fullscreen_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#fullscreen"></use>
+  </svg></span>
+    </button>
+  </li>
+
+<!---->
+  <li class="lesson-controls__item">
+    <div>
+      <div id="ember140" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember141" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="button_style_secondary">
+      <span id="ember142" class="svg-icon settings_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#settings"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+    </div>
+  </li>
+</ul>
+    </div>
+  </div>
+</div>
+</div>
+
+    <div class="lesson-modern__wrapper">
+        <div id="ember143" class="lesson-modern__top-panel ember-view"><div class="top-tools page-fragment">
+  <div class="top-tools__lesson-name">
+      1.3
+    Introduction to Classes
+  </div>
+      <div class="top-tools__progress">
+        <span>9</span>
+        out of
+        <span>9 steps</span>
+        passed
+      </div>
+      <div class="top-tools__progress">
+        <span>9</span>
+        out of
+        <span>9 points</span>&nbsp;
+        received
+      </div>
+  
+<!----></div>
+</div>
+
+      <div class="lesson lesson-modern">
+        <!---->
+<!----><!---->
+<!---->
+
+        
+
+<div class="lesson__player" data-type="quiz">
+  <div class="player-content-wrapper">
+          <article id="ember557" class="step-show ember-view"><div class="step-dynamic-container">
+<!---->
+      <div id="ember558" class="quiz-show step-view ember-view"><div id="ember559" class="quiz-layout-head ember-view"><div class="step-wrapper">
+  <div class="step-inner page-fragment">
+    <div id="ember560" class="html-content rich-text-viewer ember-view" data-processed=""><!----><span><h2>Robot: Zero position</h2>
+
+<p>A robot stands on the playfield. The position of a robot on the field is described by two coordinates: <code>X</code> and <code>Y</code>. The X-axis goes from left to right, the Y-axis -- from bottom to the top. (Remember how did you draw the function graph in school?)</p>
+
+<p><strong>Initially, the robot is at&nbsp;position 0, 0 in the field.</strong> Also, we know where the robot looks: <code>"UP"</code>, <code>"DOWN"</code>, <code>"RIGHT"</code> or <code>"LEFT"</code>. Your task -- move the robot to a given point of the playfield.</p>
+
+<p>A robot is described by the class <code>Robot</code>. You can use the following&nbsp;functions (the implementation is not known to you):</p>
+
+<pre><code class="language-python hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Robot</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_direction</span><span class="hljs-params">(self)</span> -&gt; str:</span>
+        <span class="hljs-comment"># current direction of a look</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_x</span><span class="hljs-params">(self)</span> -&gt; int:</span>
+        <span class="hljs-comment"># current X coordinate</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_y</span><span class="hljs-params">(self)</span> -&gt; int:</span>
+        <span class="hljs-comment"># current Y coordinate</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">turn_left</span><span class="hljs-params">(self)</span> -&gt; <span class="hljs-keyword">None</span>:</span>
+        <span class="hljs-comment"># turn 90 degrees counterclockwise</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">turn_right</span><span class="hljs-params">(self)</span> -&gt; <span class="hljs-keyword">None</span>:</span>
+        <span class="hljs-comment"># turn 90 degress clockwise</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">step_forward</span><span class="hljs-params">(self)</span> -&gt; <span class="hljs-keyword">None</span>:</span>
+        <span class="hljs-comment"># one step towards the direction of a look</span>
+        <span class="hljs-comment"># for one of its step robot changes one of its coordinates by one</span>
+</code></pre>
+
+<p>A robot can look four ways: <code>"UP"</code>, <code>"DOWN"</code>, <code>"RIGHT"</code>,&nbsp;<code>"LEFT"</code>.</p>
+
+<p>How it looks like:</p>
+
+<p style="text-align: center;"><img alt="" height="336" src="./Step 8 · Introduction to Classes · Stepik_files/robot.png" width="474"></p>
+
+<p><strong>Task: </strong>create a function <code>move_robot_zero(r: Robot, to_x: int, to_y: int) -&gt; None</code> that given a robot&nbsp;and specific positions <code>to_x</code>&nbsp;and <code>to_y</code> on a playfield, moves it to this position.<strong> Important:</strong> initially, the robot&nbsp;stands at position <code>0, 0</code> on a playfield.</p>
+
+<p><strong>Example of using:</strong></p>
+
+<pre><code class="language-python hljs">r = Robot(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">"UP"</span>)
+move_robot_zero(r, <span class="hljs-number">-1</span>, <span class="hljs-number">10</span>)
+print(r.get_x())  <span class="hljs-comment"># should print -1</span>
+print(r.get_y())  <span class="hljs-comment"># should print 10</span>
+</code></pre></span></div>
+
+<!---->  </div>
+</div>
+
+<strong class="quiz-layout-head__print-notify print-only">
+  To solve this problem please visit <a href="https://stepik.org/lesson/566142/step/8">https://stepik.org/lesson/566142/step/8</a>
+</strong>
+</div>
+
+    <div id="ember561" class="attempt-main ember-view"><div class="attempt-wrapper correct code attempt-wrapper_permanent-attempt">
+<!---->
+    <div class="page-fragment">
+        <div class="quiz__heading">
+          <h3 class="quiz__typename">
+              Write a program, test using stdin → stdout
+          </h3>
+
+            <div class="quiz__statistics">
+              <div title="Passed by (updates each 2 min)">
+                Correct answer from <b>21</b> learners
+              </div>
+
+                <div title="Correct ratio: # success submissions / all submissions (updates each 2 min)">
+                  Total <b>49%</b> of tries are correct
+                </div>
+            </div>
+
+            <div class="attempt__message">                <span class="attempt-message_correct">
+                    <span id="ember565" class="svg-icon correct_icon ember-view attempt-wrapper__result-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#correct"></use>
+  </svg></span>
+
+                      All is correct.
+                </span>
+                <div class="attempt__additional-message">
+                  <span id="ember562" class="svg-icon counter_icon ember-view attempt__outdated-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#counter"></use>
+  </svg></span>
+                    This problem has been updated by the author. Your score for previous submissions is preserved.
+                </div>
+              <!----><!----><!----><!----></div>
+        </div>
+
+      <!---->
+    </div>
+
+    <section class="attempt-wrapper__body">
+      <div class="page-fragment">
+              <div class="attempt__inner">
+      <div id="code-run__notify" class="attempt__code-run-notify" hidden=""></div>
+
+      <div class="attempt">
+        <!---->
+<!---->
+          <div id="ember566" class="quiz-plugin ember-view"><div class="show-plugin">
+<!---->
+<!---->
+  <div data-state="correct" data-disabled="" data-type="code-quiz" id="ember567" class="quiz-component ember-view"><!---->
+  <div class="code-quiz__container">
+      <div data-disabled="" id="ember568" class="code-editor ember-view code-quiz__code"><textarea lang="python3" rows="21" readonly="" placeholder="Type your code here..." id="ember569" class="ember-text-area ember-view code-editor__textarea" style="display: none;"></textarea><div class="CodeMirror cm-s-default CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 6px; left: 51px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 45px; margin-bottom: -17px; border-right-width: 13px; min-height: 449px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>21</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 21px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div><div class="CodeMirror-gutter-elt" style="left: 29px; width: 15px;"><div class="code-style-marker"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">class</span> <span class="cm-def">Robot</span>:</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div><div class="CodeMirror-gutter-elt" style="left: 29px; width: 15px;"><div class="code-style-marker"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">def</span> <span class="cm-def">__init__</span>(<span class="cm-variable-2">self</span>,<span class="cm-variable">x</span>: <span class="cm-builtin">int</span>, <span class="cm-variable">y</span>: <span class="cm-builtin">int</span>, <span class="cm-builtin">dir</span>: <span class="cm-builtin">str</span>):</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable-2">self</span>.<span class="cm-property">x</span> <span class="cm-operator">=</span> <span class="cm-variable">x</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable-2">self</span>.<span class="cm-property">y</span> <span class="cm-operator">=</span> <span class="cm-variable">y</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable-2">self</span>.<span class="cm-property">dir</span> <span class="cm-operator">=</span> <span class="cm-builtin">dir</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">def</span> <span class="cm-def">get_x</span>(<span class="cm-variable-2">self</span>) <span class="cm-operator">-&gt;</span> <span class="cm-builtin">int</span>:</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable-2">self</span>.<span class="cm-property">x</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">def</span> <span class="cm-def">get_y</span>(<span class="cm-variable-2">self</span>) <span class="cm-operator">-&gt;</span> <span class="cm-builtin">int</span>:</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable-2">self</span>.<span class="cm-property">y</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div><div class="CodeMirror-gutter-elt" style="left: 29px; width: 15px;"><div class="code-style-marker"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">def</span> <span class="cm-def">changePos</span>(<span class="cm-variable-2">self</span>,<span class="cm-variable">x</span>: <span class="cm-builtin">int</span>,<span class="cm-variable">y</span>: <span class="cm-builtin">int</span>) <span class="cm-operator">-&gt;</span> <span class="cm-builtin">int</span>:</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable-2">self</span>.<span class="cm-property">x</span> <span class="cm-operator">=</span> <span class="cm-variable">x</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable-2">self</span>.<span class="cm-property">y</span> <span class="cm-operator">=</span> <span class="cm-variable">y</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div><div class="CodeMirror-gutter-elt" style="left: 29px; width: 15px;"><div class="code-style-marker"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">def</span> <span class="cm-def">move_robot_zero</span>(<span class="cm-variable">r</span>: <span class="cm-variable">Robot</span>, <span class="cm-variable">to_x</span>: <span class="cm-builtin">int</span>, <span class="cm-variable">to_y</span>: <span class="cm-builtin">int</span>) <span class="cm-operator">-&gt;</span> <span class="cm-keyword">None</span>:</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div><div class="CodeMirror-gutter-elt" style="left: 29px; width: 15px;"><div class="code-style-marker"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">Robot</span>.<span class="cm-property">changePos</span>(<span class="cm-variable">r</span>,<span class="cm-variable">to_x</span>,<span class="cm-variable">to_y</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 449px;"></div><div class="CodeMirror-gutters" style="height: 462px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div><div class="CodeMirror-gutter code-style"></div></div></div></div>
+<!----></div>
+
+<!---->  </div>
+<!----></div>
+</div>
+</div>
+      </div>
+
+<!---->
+        <div class="attempt__actions">
+                  <a href="https://stepik.org/lesson/566142/step/9?unit=560427" id="ember570" class="ember-link ember-view attempt__wrapper_next-link button success">
+    Next step
+  </a>
+
+                <button class="again-btn white" data-ember-action="" data-ember-action-571="571">
+                  Solve again
+<!---->                </button>
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->        </div>
+    </div>
+
+
+<!---->
+        <div class="attempt__footer">
+                  <a href="https://stepik.org/submissions/2293341?unit=560427" id="ember564" class="ember-link ember-view not-a-button attempt__header-info-item">
+                      Your submissions
+                  </a>
+
+              <div class="attempt__score-info">
+                You got:
+                <strong>
+                    1 point
+                </strong>
+                  out of 1
+              </div>
+        </div>
+      </div>
+    </section>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+      
+      <!---->
+  </div>
+</div>
+
+<hr class="modern-lesson-divider">
+  <div class="lesson__footer no-print">
+  <div class="page-fragment lesson__footer-wrapper">
+      <div id="ember145" class="vote-widget ember-view lesson__likes-widget"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Like" role="button" tabindex="0" data-ember-action="" data-ember-action-146="146">
+  <span id="ember147" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#thumbs-up"></use>
+  </svg></span>
+<!----></span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Dislike" role="button" tabindex="0" data-ember-action="" data-ember-action-148="148">
+    <span id="ember149" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+        <span class="lesson__step-title">
+          Step 8
+        </span>
+
+        <div class="lesson__license-badge" title="This lesson is private">
+          Private <span id="ember150" class="svg-icon lock_icon ember-view lesson__license-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#lock"></use>
+  </svg></span>
+        </div>
+      
+      <div class="lesson__update-date">
+        Last update:
+        07/29/2021
+      </div>
+
+    <div class="lesson__footer-nav-buttons">
+        <button class="lesson__next-btn button has-icon" data-ember-action="" data-ember-action-151="151">
+          <span>
+            Next step
+          </span>
+          <span data-mobile-caption="">
+            Next
+          </span>
+          <span id="ember152" class="svg-icon right-arrow_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#right-arrow"></use>
+  </svg></span>
+        </button>
+    </div>
+  </div>
+</div>
+
+  <div class="lesson__discussions-wrapper">
+    <div class="page-fragment">
+        <p><br>Instructor disabled comments for this lesson.</p>
+    </div>
+  </div>
+
+  <span class="lesson__go-top lesson__go-top_modern" role="button" data-ember-action="" data-ember-action-153="153" hidden="">
+    <span id="ember154" class="svg-icon up-arrow_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?0#up-arrow"></use>
+  </svg></span>
+  </span>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div data-theme="tak-exam" id="ember155" class="modal-popup ember-view"><!----></div>
+
+    </main>
+
+    <!---->
+
+<!---->
+      <footer id="ember156" class="page-footer page-footer-modern ember-view page_footer"><div class="page-footer__container">
+  <div class="page-footer__row">
+      <div class="page-footer__col page-footer__terms">
+        <div class="page-footer__years">
+          © 2013 — 2021. Stepik
+        </div>
+        <a href="https://welcome.stepik.org/en/terms" target="_blank" rel="noopener noreferrer">Terms of service</a> and <a href="https://welcome.stepik.org/en/privacy" target="_blank" rel="noopener noreferrer">privacy policy</a>
+      </div>
+
+      <div class="page-footer__col page-footer__lists">
+        <ul class="page-footer__col  page-footer__list">
+            <li>
+              <a href="https://welcome.stepik.org/en/pricing" target="_blank" rel="noopener noreferrer">Pricing</a>
+            </li>
+          <li>
+              <a href="http://support.stepik.org/hc/en-us" target="_blank" rel="noopener noreferrer">Help Center</a>
+          </li>
+          <li>
+            <a href="https://welcome.stepik.org/en/contacts" target="_blank" rel="noopener noreferrer">Contacts</a>
+          </li>
+<!---->        </ul>
+
+        <ul class="page-footer__col page-footer__list">
+
+
+          <li>
+            <a href="https://welcome.stepik.org/en/about" target="_blank" rel="noopener noreferrer">About Stepik</a>
+          </li>
+          <li>
+            <a href="https://welcome.stepik.org/en/team" target="_blank" rel="noopener noreferrer">Team</a>
+          </li>
+<!---->          <li>
+            <a href="https://welcome.stepik.org/en/press" target="_blank" rel="noopener noreferrer">Press</a>
+          </li>
+        </ul>
+
+        <ul class="page-footer__col page-footer__counters  page-footer__list">
+          <li title="Number of submissions on Stepik">
+            <strong>454,427,719</strong> submissions
+          </li>
+        </ul>
+      </div>
+
+      <div class="page-footer__col page-footer__social-links">
+          <a href="https://facebook.com/stepikorg" target="_blank" rel="noopener noreferrer" class="page-footer__social-link">
+            <img alt="Facebook" src="./Step 8 · Introduction to Classes · Stepik_files/footer-fb.svg">
+          </a>
+          <a href="https://twitter.com/stepikorg" target="_blank" rel="noopener noreferrer" class="page-footer__social-link">
+            <img alt="Twitter" src="./Step 8 · Introduction to Classes · Stepik_files/footer-twitter.svg">
+          </a>
+      </div>
+  </div>
+
+    <div class="page-footer__row page-footer__row_order_second ">
+      <div class="page-footer__col page-footer__apps">
+          <a class="page-footer__mobapp-link" target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/app/id1064581926">
+            <img alt="Get it on Apple Store" src="./Step 8 · Introduction to Classes · Stepik_files/app-store-badge-en.svg">
+          </a>
+        <a class="page-footer__mobapp-link" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=org.stepic.droid">
+            <img alt="Get it on Google Play" src="./Step 8 · Introduction to Classes · Stepik_files/google-play-badge-en.png">
+        </a>
+      </div>
+      <div class="page-footer__col page-footer__CC-note">
+        Public user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> license with attribution required
+      </div>
+    </div>
+
+      <div class="page-footer__build-info" aria-hidden="true" title="Build info:
+- tag 221.0.14107
+- date n/a
+- package 0.0.0+2d092478">
+        221.0.14107
+      </div>
+</div>
+
+<span class="page-footer__ab-group" aria-hidden="true">
+<!----><!----></span>
+</footer>
+  </div>
+
+  <div id="context_menu"></div>
+
+  <div id="ember157" class="loading-overlay-container ember-view"><!----></div>
+</div>
+
+<div data-theme="confirm" id="ember158" class="modal-popup ember-view"><!----></div>
+
+<div id="ember159" class="modal-popup ember-view upgrade-course-modal-dialog"><!----></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
